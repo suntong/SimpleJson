@@ -1,0 +1,16 @@
+# Number of days of inactivity before an issue becomes stale
+daysUntilStale: 3
+# Number of days of inactivity before a stale issue is closed
+daysUntilClose: 14
+# Issues with these labels will never be considered stale
+exemptLabels:
+  - todo
+  - pinned
+  - security
+# Label to use when marking an issue as stale
+staleLabel: wontfix
+# Comment to post when marking an issue as stale. Set to `false` to disable
+markComment: >
+  As stated in the LICENSE, this software *is provided **as is**, without warranty of any kind*, so all issue will be automatically marked as stale unless you are actively engaged in it until you solve it yourself. Otherwise, it will be automatically closed if no further activity occurs within the next two weeks. Thank you for your understanding.
+# Comment to post when closing a stale issue. Set to `false` to disable
+closeComment: false
