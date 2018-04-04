@@ -59,6 +59,11 @@ namespace SimpleJsonTest
 
             Console.WriteLine(sys["inputs"][0]);
             Console.WriteLine(sys["outputs"][1]);
+
+            // Convert to List<string>
+            var i = (List<object>)sys["inputs"];
+            var isl = i.Cast<string>().ToList();
+            var isl2 = ((List<object>)sys["inputs"]).Cast<string>().ToList();
         }
     }
 }
