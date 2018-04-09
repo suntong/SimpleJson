@@ -6,6 +6,7 @@ using System.Text;
 
 using System.Threading.Tasks;
 using SimpleJson;
+using SimpleJsonTest.Properties;
 
 namespace SimpleJsonTest
 {
@@ -80,6 +81,24 @@ namespace SimpleJsonTest
 
             object obj = SimpleJson.SimpleJson.DeserializeObject(jsonString);
             Console.WriteLine(obj);
+        }
+
+        public static void TestProperties_ResourceManager()
+        {
+            string scenario = Resources.ResourceManager.GetString("Scenario");
+            if (scenario != null)
+                Console.WriteLine(scenario);
+            else
+                Console.WriteLine("Resource Properties not found!");
+        }
+
+        public static void TestProperties_Properties()
+        {
+            string scenario = Properties.Resources.Scenario;
+            if (scenario != null)
+                Console.WriteLine(scenario);
+            else
+                Console.WriteLine("Resource Properties not found!");
         }
 
     }
