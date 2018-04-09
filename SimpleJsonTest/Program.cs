@@ -1,7 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 using System.Threading.Tasks;
 using SimpleJson;
 
@@ -13,6 +15,9 @@ namespace SimpleJsonTest
         {
             Test1();
             Test2();
+            TestJsFile();
+            TestProperties_ResourceManager();
+            TestProperties_Properties();
         }
         public static void Test1()
         {
@@ -65,5 +70,17 @@ namespace SimpleJsonTest
             var isl = i.Cast<string>().ToList();
             var isl2 = ((List<object>)sys["inputs"]).Cast<string>().ToList();
         }
+        public static void TestJsFile()
+        {
+            string jsonString="";
+
+            string fn = "Program.json";
+            if (File.Exists(fn))
+                jsonString = File.ReadAllText(fn, Encoding.UTF8);
+
+            object obj = SimpleJson.SimpleJson.DeserializeObject(jsonString);
+            Console.WriteLine(obj);
+        }
+
     }
 }

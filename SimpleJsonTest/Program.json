@@ -1,0 +1,8 @@
+﻿{
+  "CPU": "Intel",
+  "Cores": 8,
+  "Drives": [
+    "DVD read/writer",
+    "500 gigabyte hard drive"
+  ]
+}
