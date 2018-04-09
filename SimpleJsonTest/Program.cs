@@ -19,6 +19,8 @@ namespace SimpleJsonTest
             TestJsFile();
             TestProperties_ResourceManager();
             TestProperties_Properties();
+            TestAppSettings1();
+            TestAppSettings2();
         }
         public static void Test1()
         {
@@ -99,6 +101,24 @@ namespace SimpleJsonTest
                 Console.WriteLine(scenario);
             else
                 Console.WriteLine("Resource Properties not found!");
+        }
+
+        public static void TestAppSettings1()
+        {
+            string scenario = (string)Settings.Default["TestScenario"];
+            if (scenario != null)
+                Console.WriteLine(scenario);
+            else
+                Console.WriteLine("AppSettings not found!");
+        }
+
+        public static void TestAppSettings2()
+        {
+            string scenario = (string)Settings.Default.TestScenario;
+            if (scenario != null)
+                Console.WriteLine(scenario);
+            else
+                Console.WriteLine("AppSettings not found!");
         }
 
     }
