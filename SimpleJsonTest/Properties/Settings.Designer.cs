@@ -31,5 +31,14 @@ namespace SimpleJsonTest.Properties {
                 return ((string)(this["TestScenario"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("{\"CPU\":\"Intel\",\"Cores\":8,\"Drives\":[\"DVD read/writer\",\"500 gigabyte hard drive\"]}")]
+        public string TestJsonStr {
+            get {
+                return ((string)(this["TestJsonStr"]));
+            }
+        }
     }
 }

@@ -5,5 +5,8 @@
     <Setting Name="TestScenario" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Recalc</Value>
     </Setting>
+    <Setting Name="TestJsonStr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{"CPU":"Intel","Cores":8,"Drives":["DVD read/writer","500 gigabyte hard drive"]}</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

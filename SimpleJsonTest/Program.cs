@@ -21,6 +21,7 @@ namespace SimpleJsonTest
             TestProperties_Properties();
             TestAppSettings1();
             TestAppSettings2();
+            TestAppSettings3();
         }
         public static void Test1()
         {
@@ -119,6 +120,19 @@ namespace SimpleJsonTest
                 Console.WriteLine(scenario);
             else
                 Console.WriteLine("AppSettings not found!");
+        }
+
+        public static void TestAppSettings3()
+        {
+            string input = (string)Settings.Default.TestJsonStr;
+            if (input == null) {
+                Console.WriteLine("AppSettings not found!");
+                return;
+            }
+            Console.WriteLine(input);
+            object obj = SimpleJson.SimpleJson.DeserializeObject(input);
+            Console.WriteLine(obj);
+
         }
 
     }
